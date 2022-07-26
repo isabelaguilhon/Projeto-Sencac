@@ -2,6 +2,7 @@
 <?php 
     require_once '../controller/CUsuario.php';
     $cadUsuario = new CUsuario;
+    // $listaUsers = $cadUsuario->getUsuarios();
 ?>
 <html>
     <head>
@@ -16,8 +17,13 @@
         action="<?php $cadUsuario->inserir(); ?>" 
         method="POST"
         >
-            <input type="text" name="nome" placeholder="Insira seu nome..."/>
+        <input type="text" name="nome" placeholder="Insira seu nome..."/>
             <br/><br/>
+            <select name="perfilAcesso">
+                <option value="">Selecione uma opção</option>
+                <option value="admin">Administrador</option>
+                <option value="user">Usuário</option>
+            </select>
             <input type="text" name="usuario" placeholder="Insira seu nome de usuário..." />
             <br/><br/>
             <input type="password" name="senha" minlength="8" placeholder="Insira a senha..."/>
@@ -27,7 +33,8 @@
             <input type="button" value="Voltar"
             onclick="location.href='../index.php'"/>
             <input type="button" value="Listar Usuários"
-            onclick="location.href='listaUsuarios.php'"/>
+            onclick="location.href='./listaUsuario.php'"/>
         </form>
+        
     </body>
 </html>

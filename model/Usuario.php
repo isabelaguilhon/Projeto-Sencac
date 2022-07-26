@@ -38,7 +38,8 @@
             $user = "Usuário: <br/>"
                 . " - Nome Usuário: " . $this->getNomeUsuario() . "<br/>"
                 . " - Usuário: " . $this->getUsuario() . "<br/>";
-            return $user;
+           
+             }     return $user;
     }
 }
 ?>

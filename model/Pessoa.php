@@ -68,3 +68,4 @@ Class Pessoa {
     public function setEmail($email)
     {
         $this->email = $email;
+    }
