@@ -49,8 +49,8 @@
     }
 
     public function getUsuarioById($id) {
-        $pdo = require_once './pdo/Connection.php';
-        $sql = 'select idUsuario, nomeUsuario, usuario from usuario where idUsuario = ?';
+        $pdo = require_once '../pdo/Connection.php';
+        $sql = 'select idUsuario, nomeUsuario, usuario, perfilAcesso from usuario where idUsuario = ?';
         $sth = $pdo->prepare($sql);
         $sth->bindParam(1, $id, PDO::PARAM_INT);
         $sth->execute();

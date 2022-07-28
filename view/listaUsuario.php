@@ -20,6 +20,7 @@
                         <th>ID</th>
                         <th>Nome Usuário</th>
                         <th>Usuário</th>
+                        <th>Perfil Acesso</th>
                         <th>Funções</th>
                     </tr>
                 </thead>
@@ -31,8 +32,20 @@
                         <td><?php echo $user['idUsuario']; ?></td>
                         <td><?php echo $user['nomeUsuario']; ?></td>
                         <td><?php echo $user['usuario']; ?></td>
-                        <td><?php echo $user['perfilAcesso']; ?></td>
-                        <td>Editar
+                        <td><?php if($user['perfilAcesso'] == "admin"){
+                            echo "Administrador";
+                        }else if($user['perfilAcesso'] == "user"){
+                            echo "Usuario";
+                        } ?></td>
+                        <td>
+                        <form action="editarUser.php" method="POST">
+                                <input
+                                type="hidden"
+                                name="idUsuario"
+                                value="<?php echo $user['idUsuario']; ?>"
+                                />
+                                <input type="submit" value="Editar" name="editar"/>
+                            </form>
                             <form action="../controller/DeletarUser.php" method="POST">
                                 <input
                                 type="hidden"
