@@ -9,12 +9,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="Content Language" content="pt-br">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
         <title>Lista Usuario</title>
     </head>
 <body>
-    <div>
+
+    <div class="container text-center">
             <h2>Lista Usuários</h2>
-            <table>
+            <table class="table table striped">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -64,5 +66,6 @@
             <input type="button" value="Voltar"
             onclick="location.href='../index.php'"/>
         </div>
+        <script href="../assets/css/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     </body>
 </html>
